@@ -12,7 +12,7 @@ export default function App() {
   const roomNumber = useSelector(state => state.roomNumber);
   const socket = useSelector(state => state.socket);
   const dispatch = useDispatch();
-  
+
   // const [loading, setLoading] = useState(false);
 
   const chatRoomClick = (room) => {
@@ -37,7 +37,7 @@ export default function App() {
     }
   }
 
-  const chatSubmit = (chatInput,setChatInput) => {
+  const chatSubmit = (chatInput, setChatInput) => {
     socket.emit("chat message", `room${roomNumber}`, 999, sellerName, chatInput, 1);
     dispatch({
       type: 'ADD_CHAT_MESSAGE', payload: {
@@ -70,7 +70,7 @@ export default function App() {
     if (socket) {
       //여러번 호출 방지
       socket.off('chat message');
-      socket.on('chat message', (room, user, userName, message) => { 
+      socket.on('chat message', (room, user, userName, message) => {
         dispatch({
           type: 'ADD_CHAT_MESSAGE', payload: {
             room,
@@ -152,7 +152,7 @@ export default function App() {
           <input placeholder='내용을 입력해 주세요!' value={chatInput} onChange={(e) => { setChatInput(e.target.value) }} className='chatInput'
             disabled={roomNumber === null ? true : false}
           />
-          <button onClick={()=>{chatSubmit(chatInput,setChatInput)}} className='chatSubmitButton'>전송</button>
+          <button onClick={() => { chatSubmit(chatInput, setChatInput) }} className='chatSubmitButton'>전송</button>
         </div>
       </div>
     )
