@@ -1,0 +1,133 @@
+:root{
+    --main-bg-color: #f1f1f1;
+    --main-font-color: #333;
+    --main-font-size: 14px;
+    --main-font-weight: 400;
+    --main-font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font-family);
+}
+h1,h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.chatRoomListContainer{
+    width: 30%;
+    /* background: #f1f1f1; */
+    padding: 10px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.chatBox{
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    border-left: 1px dotted rgb(156, 156, 156);
+}
+.chatRoomList{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    height: 80px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
+    cursor: pointer;;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+.productImg{
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.productInfo{
+    width: 70%;
+    padding: 0px 10px;
+    font-size: 12px;
+}
+.productTitle{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.lastChatTime{
+    margin-top: 2px;
+    font-size: 10px;
+    color: #999;
+}
+.chatMsgBox{
+    height: 93%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.chatInputBox{
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+.chatInput{
+    border: none;
+    outline: none;
+    width: 85%;
+    height: 90%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin: 0px 5px;
+}
+.chatSubmitButton{
+    border: none;
+    outline: none;
+    width: 15%;
+    height: 90%;
+    border-radius: 10px;
+    background: rgb(93, 93, 255);
+    font-size: 14px;
+    cursor: pointer;
+    color:white;
+    margin-right: 3px;
+}
+.meChat{
+    width: fit-content;
+    background: rgb(255, 255, 0);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 14px;
+    align-self: flex-end;
+}
+.youChat{
+    width: fit-content;
+    background: rgb(193, 193, 193);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 14px;
+    align-self: flex-start;
+}
+.chatRoomSelect{
+    height: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 1%;
+}
